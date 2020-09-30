@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+    <head>
+        <title> Login </title>
+    </head>
+    <body align = "center">   
+        <h2>LOGIN</h2>
+        <form name="loginForm" onsubmit="return validate()" method="POST" action="authenticate.php">
+            Username : <input type="text" name="username"><br><br>
+            Password : <input type="password" name="password"><br><br>
+            <input type="submit" value="Login"> 
+            <input type="reset" value="Clear">
+        </form>
+        <script>
+            function validate() {
+                var ID = document.loginForm.username.value;
+                var pass = document.loginForm.password.value;
+                if (ID == "" && pass == "") {
+                    alert("Please enter Username and Password");
+                    return false;
+                }
+                else if (ID == "") {
+                    alert("Please enter Username");
+                    return false;
+                }
+                else if (pass == "") {
+                    alert("Please enter Password");
+                    return false;
+                }
+            }
+
+        </script>
+    </body>
+</html>
